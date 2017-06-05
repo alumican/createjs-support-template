@@ -1,0 +1,6 @@
+[submodule "deploy/lib/createjs-support"]
+	path = deploy/lib/createjs-support
+	url = git@github.com:alumican/createjs-support.git
+[submodule "deploy/lib/jppcorelib"]
+	path = deploy/lib/jppcorelib
+	url = git@github.com:alumican/jppcorelib.js.git
