@@ -1,6 +1,6 @@
 /// <reference path="reference.ts" />
 
-module project {
+namespace project {
 
 	const application = new Application();
 	application.run();

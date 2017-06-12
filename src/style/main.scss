@@ -1,0 +1,29 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#stage {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+}
+
+#foreground {
+	position: relative;
+	z-index: 200;
+
+	p {
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+}
+
+#stats {
+	position: fixed;
+	z-index: 300;
+	top: 0;
+	left: 0;
+}
