@@ -24,11 +24,14 @@ bin-release-tmp/
 bin-release-temp/
 
 
+### Node.js ###
+node_modules/
+
+
 ### Project ###
+src/fla/
 src/image/
-src/clip/
-src/sound/
 src/script/**/*.js
-deploy/media/
+src/sound/
+src/style/**/*.css
 log/
-gulp/node_modules/

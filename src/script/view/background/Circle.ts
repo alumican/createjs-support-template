@@ -1,6 +1,6 @@
 /// <reference path="../../reference.ts" />
 
-module project {
+namespace project {
 
 	import ScrollWatcher = alm.ScrollWatcher;
 	export class Circle extends alm.View<createjs.Shape> {
@@ -53,14 +53,14 @@ module project {
 			alm.ScrollWatcher.removeEventListener(alm.ScrollWatcherEvent.SCROLL, this.scrollWatcherScrollHandler);
 		}
 
-		protected implShow(view:createjs.Shape, useTransition:boolean):JPP.Command {
-			return new JPP.Func(():void => {
+		protected implShow(view:createjs.Shape, useTransition:boolean):cmd.Command {
+			return new cmd.Func(():void => {
 				view.alpha = 1;
 			});
 		}
 
-		protected implHide(view:createjs.Shape, useTransition:boolean):JPP.Command {
-			return new JPP.Func(():void => {
+		protected implHide(view:createjs.Shape, useTransition:boolean):cmd.Command {
+			return new cmd.Func(():void => {
 				view.alpha = 0.2;
 			});
 		}

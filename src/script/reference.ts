@@ -1,9 +1,9 @@
-/* ---------- Library ---------- */
+/* ---------- Dependency ---------- */
 /// <reference path="../../deploy/lib/stats/stats.d.ts" />
+/// <reference path="../../deploy/lib/command/lib/command.d.ts" />
 /// <reference path="../../deploy/lib/jquery/jquery.d.ts" />
-/// <reference path="../../deploy/lib/jppcorelib/lib/jppcorelib.d.ts" />
 /// <reference path="../../deploy/lib/createjs/createjs.d.ts" />
-/// <reference path="../../deploy/lib/createjs-support/src/reference.ts" />
+/// <reference path="../../deploy/lib/createjs-support/lib/createjs-support.d.ts" />
 
 
 

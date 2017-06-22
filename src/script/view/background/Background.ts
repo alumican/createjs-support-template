@@ -1,6 +1,6 @@
 /// <reference path="../../reference.ts" />
 
-module project {
+namespace project {
 
 	export class Background extends alm.View<createjs.Container> {
 
@@ -54,27 +54,27 @@ module project {
 			}
 		}
 
-		protected implShow(view:createjs.Container, useTransition:boolean):JPP.Command {
-			return new JPP.Serial(
-				new JPP.Func(():void => {
+		protected implShow(view:createjs.Container, useTransition:boolean):cmd.Command {
+			return new cmd.Serial(
+				new cmd.Func(():void => {
 					const numCircle:number = this.circles.length;
 					for (let i:number = 0; i < numCircle; ++i) {
 						this.circles[i].show(useTransition);
 					}
 				}),
-				alm.CommandUtil.fadeIn(view, useTransition ? 1 : 0, JPP.Easing.easeOutQuart, false)
+				alm.CommandUtil.fadeIn(view, useTransition ? 1 : 0, cmd.Easing.easeOutQuart, false)
 			);
 		}
 
-		protected implHide(view:createjs.Container, useTransition:boolean):JPP.Command {
-			return new JPP.Serial(
-				new JPP.Func(():void => {
+		protected implHide(view:createjs.Container, useTransition:boolean):cmd.Command {
+			return new cmd.Serial(
+				new cmd.Func(():void => {
 					const numCircle:number = this.circles.length;
 					for (let i:number = 0; i < numCircle; ++i) {
 						this.circles[i].hide(useTransition);
 					}
 				}),
-				alm.CommandUtil.fadeOut(view, useTransition ? 1 : 0, JPP.Easing.easeOutQuart, false)
+				alm.CommandUtil.fadeOut(view, useTransition ? 1 : 0, cmd.Easing.easeOutQuart, false)
 			);
 		}
 

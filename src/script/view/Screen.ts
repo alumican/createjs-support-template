@@ -1,6 +1,6 @@
 /// <reference path="../reference.ts" />
 
-module project {
+namespace project {
 
 	export class Screen extends alm.View<createjs.Container> {
 
@@ -47,25 +47,25 @@ module project {
 			this.background.finalize();
 		}
 
-		protected implShow(view:createjs.Container, useTransition:boolean):JPP.Command {
-			return new JPP.Serial(
-				new JPP.Func(():void => {
+		protected implShow(view:createjs.Container, useTransition:boolean):cmd.Command {
+			return new cmd.Serial(
+				new cmd.Func(():void => {
 					view.visible = true;
 				}),
-				new JPP.Parallel(
+				new cmd.Parallel(
 					this.foreground.getShowCommand(useTransition),
 					this.background.getShowCommand(useTransition)
 				)
 			);
 		}
 
-		protected implHide(view:createjs.Container, useTransition:boolean):JPP.Command {
-			return new JPP.Serial(
-				new JPP.Parallel(
+		protected implHide(view:createjs.Container, useTransition:boolean):cmd.Command {
+			return new cmd.Serial(
+				new cmd.Parallel(
 					this.foreground.getHideCommand(useTransition),
 					this.background.getHideCommand(useTransition)
 				),
-				new JPP.Func(():void => {
+				new cmd.Func(():void => {
 					view.visible = false;
 				})
 			);

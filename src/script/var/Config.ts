@@ -1,6 +1,6 @@
 /// <reference path="../reference.ts" />
 
-module project {
+namespace project {
 
 	export class Config {
 
